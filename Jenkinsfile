@@ -8,8 +8,16 @@ pipeline {
         echo "Building ASP.NET application"
         git changelog: false, credentialsId: 'josh-github', poll: false, url: 'https://github.com/jhendrickCB/wingtip.git'
         bat 'C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe C#\\WingtipToys\\WingtipToys.csproj'
+        echo "Completed building ASP.NET application"
       }
     }
+    stage('Package') {
+      steps {
+        echo "Packaging Application"
+        zip zipFile: 'wingtipDLL.zip', dir:'C:\\Jenkins\\workspace\\wingtip\\package'
+        echo "Completed packaging Application"
+      }
+    }    
     stage('Test') {
       steps {
         echo "Testing application"
