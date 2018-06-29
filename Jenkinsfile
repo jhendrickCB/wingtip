@@ -35,8 +35,7 @@ pipeline {
       steps {
         echo "Testing application"
         dir('C#\\tests') {
-           powershell '$env:path += "$env:path;C:\\\\selenium\\\\geckodriver-v0.21.0-win64"'
-           bat 'run-tests.bat'
+           bat 'powershell -noexit "& "".\run-tests.ps1"""'
         }
         echo "Completed testing application"
       }
