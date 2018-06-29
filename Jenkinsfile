@@ -35,6 +35,7 @@ pipeline {
       steps {
         echo "Testing application"
         dir('C#\\tests') {
+           bat '$env:path += "$env:path;C:\\selenium\\geckodriver-v0.21.0-win64"'
            bat 'run-tests.bat'
         }
         echo "Completed testing application"
