@@ -34,10 +34,7 @@ pipeline {
     stage('Test') {
       steps {
         echo "Testing application"
-        dir('C#\\tests') {
-            bat 'C:\\"Program Files\\nodejs\\npm" install'
-            bat '$env:path += "C:\\selenium\\geckodriver-v0.21.0-win64";C:\\"Program Files\\nodejs\\node.exe" selenium-test.js'
-        }
+        bat 'C#\\tests\\run-tests.bat'
         echo "Completed testing application"
       }
     }
