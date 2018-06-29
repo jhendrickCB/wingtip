@@ -14,7 +14,7 @@ pipeline {
     stage('Package') {
       steps {
         echo "Packaging Application"
-        zip zipFile: 'wingtipDLL.zip', dir:'C:\\wingtip\\package'
+        sh 'pwd'
         echo "Completed packaging Application"
       }
     }    
