@@ -35,7 +35,7 @@ pipeline {
       steps {
         echo "Testing application"
         dir('C#\\tests') {
-           bat 'C#\\tests\\run-tests.bat'
+           bat 'run-tests.bat'
         }
         echo "Completed testing application"
       }
