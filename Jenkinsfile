@@ -35,7 +35,7 @@ pipeline {
       steps {
         echo "Testing application"
         dir('C#\\tests') {
-           bat 'powershell -noexit "& "".\run-tests.ps1"""'
+           bat 'powershell -noexit "& "".\\run-tests.ps1"""'
         }
         echo "Completed testing application"
       }
