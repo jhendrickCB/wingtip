@@ -14,7 +14,7 @@ pipeline {
     stage('Package') {
       steps {
         echo "Packaging Application"
-        sh 'pwd'
+        bat 'dir'
         echo "Completed packaging Application"
       }
     }    
