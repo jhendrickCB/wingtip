@@ -34,7 +34,7 @@ pipeline {
     stage('Test') {
       steps {
         echo "Testing application"
-        bat 'C#\\tests\\run-tets.bat'
+        bat 'C#\\tests\\run-tests.bat'
         echo "Completed testing application"
       }
     }
