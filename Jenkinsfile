@@ -14,7 +14,7 @@ pipeline {
     stage('Package') {
       steps {
         echo "Packaging Application"
-        zip zipFile: 'wingtipDLL.zip', dir:'C:\\Jenkins\\workspace\\wingtip\\package'
+        zip zipFile: 'wingtipDLL.zip', dir:'C:\\wingtip\\package'
         echo "Completed packaging Application"
       }
     }    
