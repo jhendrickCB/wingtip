@@ -14,7 +14,7 @@ pipeline {
     stage('Package') {
       steps {
         echo "Packaging Application"
-        bat 'dir'
+        zip dir: 'C#\\WingtipToys\\bin', glob: '*.dll', zipFile: 'wingTipDLL.zip'
         echo "Completed packaging Application"
       }
     }    
