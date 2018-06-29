@@ -2,9 +2,6 @@ pipeline {
   agent {
       label 'windows2016'
   }
-  environment {
-      PATH = "${env:path};C:\\Program Files\\nodejs;C:\\selenium\\geckodriver-v0.21.0-win64"
-  }
   stages {
     stage('Build') {
       steps {
