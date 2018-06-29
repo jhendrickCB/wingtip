@@ -34,7 +34,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo "Deploy application"
-        bat 'copy .\wingTipDLL.zip C:\\wingtip\\deploy'
+        bat 'copy wingTipDLL.zip C:\\wingtip\\deploy'
         echo "Completed deploy application"
       }
     }
