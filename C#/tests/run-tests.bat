@@ -1,3 +1,3 @@
 @echo off
 npm install
-node selenium-test.js
+C:\"Program Files\nodejs\node.exe" selenium-test.js
