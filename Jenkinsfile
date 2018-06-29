@@ -36,7 +36,7 @@ pipeline {
         echo "Testing application"
         dir('C#\\tests') {
             bat 'C:\\"Program Files\\nodejs\\npm" install'
-            bat 'C:\\"Program Files\\nodejs\\node.exe" selenium-test.js'
+            bat '$env:path += "C:\\selenium\\geckodriver-v0.21.0-win64";C:\\"Program Files\\nodejs\\node.exe" selenium-test.js'
         }
         echo "Completed testing application"
       }
