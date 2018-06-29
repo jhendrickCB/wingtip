@@ -34,9 +34,7 @@ pipeline {
     stage('Test') {
       steps {
         echo "Testing application"
-        bat 'cd C#\\tests'
-        bat 'npm install'
-        bat 'node selenium-test'
+        bat 'C#\\tests\\run-tets.bat'
         echo "Completed testing application"
       }
     }
