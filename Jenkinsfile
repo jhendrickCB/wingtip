@@ -21,6 +21,8 @@ pipeline {
     stage('Test') {
       steps {
         echo "Testing application"
+
+        echo "Completed testing application"
       }
     }
     stage('Checkpoint') {
@@ -32,6 +34,8 @@ pipeline {
     stage('Deploy') {
       steps {
         echo "Deploy application"
+        bat 'copy .\wingTipDLL.zip C:\\wingtip\\deploy'
+        echo "Completed deploy application"
       }
     }
   }
