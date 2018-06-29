@@ -18,13 +18,6 @@ pipeline {
         echo "Completed packaging Application"
       }
     }    
-    stage('Test') {
-      steps {
-        echo "Testing application"
-
-        echo "Completed testing application"
-      }
-    }
     stage('Checkpoint') {
     	//agent none
         steps {
@@ -36,6 +29,15 @@ pipeline {
         echo "Deploy application"
         bat 'copy wingTipDLL.zip C:\\wingtip\\deploy'
         echo "Completed deploy application"
+      }
+    }
+    stage('Test') {
+      steps {
+        echo "Testing application"
+        bat 'cd C#\\tests'
+        bat 'npm install'
+        bat 'node selenium-test'
+        echo "Completed testing application"
       }
     }
   }
