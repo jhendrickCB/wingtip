@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label "windows2016"
+    label 'windows2016'
   }
   stages {
     stage('Build') {
